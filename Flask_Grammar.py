@@ -3,7 +3,7 @@ import os
 from flask import Flask, redirect, render_template, request, url_for
 from openai import OpenAI
 client = OpenAI(
-    api_key=os.environ.get(".env"),
+    api_key=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,
 )
 
 app = Flask(__name__)
