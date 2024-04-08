@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrammarTutor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+        }
+
+        main {
+            width: 80%;
+            margin: 20px 0;
+        }
+
+        p {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-family: inherit;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        #output {
+            display: none;
+            padding: 10px;
+            border: 1px solid #333;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>GrammarTutor</h1>
+    </header>
+
+    <main>
+        <p>Xiaoshuang Wang B00826668 - Dalhousie University - MGMT 4620 - Final Project</p>
+        <p>Welcome to GrammarTutor! Submit your text below to correct its grammar.</p>
+
+        <textarea id="userText" placeholder="Enter your text here..."></textarea>
+
+        <button onclick="correctGrammar()">Submit</button>
+
+        <div id="output"></div>
+    </main>
+
+    <script>
+        function correctGrammar() {
+            const userText = document.getElementById('userText').value;
+
+            // Code to correct grammar goes here (You can integrate a grammar checking library/API)
+
+            // For demonstration purposes, let's just convert the text to uppercase
+            const correctedText = userText.toUpperCase();
+
+            document.getElementById('output').innerText = correctedText;
+            document.getElementById('output').style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>
