@@ -3,7 +3,7 @@ import openai
 
 app = Flask(__name__)
 
-openai.api_key = "your_openai_api_key_here"
+openai.api_key = "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"
 
 def grammar_correction(input_text):
     response = openai.Completion.create(
